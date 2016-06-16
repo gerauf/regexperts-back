@@ -7,10 +7,10 @@ describe 'levels api' do
 
   describe '#show' do
     it 'serves the desired level' do
-      create :level
-      get '/levels/1'
+      create_list :level, 2
+      get '/levels/2'
       expect(response).to be_success
-      expect(json.first['id']).to eq 1
+      expect(json['id']).to eq 2
     end
 
   end
