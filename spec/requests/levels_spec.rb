@@ -12,7 +12,14 @@ describe 'levels api' do
       expect(response).to be_success
       expect(json['id']).to eq 2
     end
+  end
 
+  describe '#show' do
+    it 'serves the desired mission' do
+      level = create :level, mission: 'This is your mission'
+      get '/levels/3'
+      expect(json['mission']).to eq 'This is your mission'
+    end
   end
 
 end
