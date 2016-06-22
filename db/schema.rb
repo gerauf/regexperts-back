@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(version: 20160622134234) do
   create_table "levels", force: :cascade do |t|
     t.text     "text"
     t.string   "target"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.text     "mission"
+    t.integer  "number"
+    t.integer  "keystrokelimit"
   end
 
 end
