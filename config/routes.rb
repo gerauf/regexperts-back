@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   resources :levels, only: [:show]
-
+  resources :high_scores, only: [:index, :create]
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
