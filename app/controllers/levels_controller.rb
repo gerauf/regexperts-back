@@ -1,5 +1,5 @@
 class LevelsController < ApplicationController
   def show
-    render json: Level.find(params[:id])
+    render json: Level.first(params[:number])
   end
 end
