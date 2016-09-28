@@ -20,7 +20,7 @@ module RegexpertsBack
 
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
-        origins 'http://localhost:8080'
+        origins 'http://localhost:8080', 'https://snowden-files.herokuapp.com'
         resource '*', headers: :any, methods: [:get, :post]
       end
     end
