@@ -10,7 +10,7 @@ describe 'levels api' do
       create_list :level, 2
       get '/levels/2'
       expect(response).to be_success
-      expect(json['id']).to eq 2
+      expect(json['number']).to eq 2
     end
   end
 
